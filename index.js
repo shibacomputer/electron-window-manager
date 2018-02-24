@@ -197,7 +197,7 @@ Window.prototype.create = function(url) {
     // Set the window menu (null is valid to not have a menu at all)
     if(this.setup.menu !== undefined){
         if(process.platform === 'darwin') {
-          this.object.setApplicationMenu(Menu.buildFromTemplate(this.setup.menu));
+          Menu.setApplicationMenu(Menu.buildFromTemplate(this.setup.menu));
         } else {
           this.object.setMenu(this.setup.menu);
         }
