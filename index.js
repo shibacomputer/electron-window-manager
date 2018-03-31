@@ -4,7 +4,7 @@
  *
  * https://npmjs.com/package/electron-window-manager
  * https://github.com/TamkeenLMS/electron-window-manager
- * 
+ *
  * ~ zain
  * */
 'use strict';
@@ -199,7 +199,7 @@ Window.prototype.create = function(url) {
         if(process.platform === 'darwin') {
           Menu.setApplicationMenu(Menu.buildFromTemplate(this.setup.menu));
         } else {
-          this.object.setMenu(this.setup.menu);
+          this.object.setMenu(Menu.buildFromTemplate(this.setup.menu));
         }
     }
 
